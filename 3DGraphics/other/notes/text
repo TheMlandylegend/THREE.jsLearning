@@ -1,0 +1,16 @@
+    //call the parent child plane-01
+    var plane = scene.getObjectByName('plane-01');
+   // plane.rotation.y +=0.001;
+
+    plane.rotation.z +=0.001;
+
+    //plane.rotation.x +=0.001;
+         
+    // add scale on the x axis at 0.001
+    scene.traverse(function(child){
+        child.scale.x += 0.001;
+    })
+
+    plane.add(box);
+
+    plane.position.y = 1;
